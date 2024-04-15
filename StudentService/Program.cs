@@ -15,7 +15,7 @@ namespace StudentService
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
-            builder.Services.AddScoped<IStudentService, StudentServices>();
+            //builder.Services.AddScoped<IStudentService, StudentServices>();
             builder.Services.AddScoped<IGradeService, GradeServise>();
             builder.Services.AddScoped<IBuildingService, BuildingService>();
             builder.Services.AddScoped<ITeacherService, TeacherService>();

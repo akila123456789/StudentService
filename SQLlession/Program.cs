@@ -26,14 +26,13 @@ namespace SQLlession
                 //Writing sql query
 
                 SqlCommand cm = new SqlCommand(@"
-                IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Student')
+                IF NOT EXISTS (SELECT * FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_NAME = 'Building')
                 BEGIN
-                    CREATE TABLE Student (
-                        id INT NOT NULL,
-                        name VARCHAR(100),
-                        email VARCHAR(50),
-                        join_date DATE,
-                        PRIMARY KEY (id)
+                    CREATE TABLE Building (
+                        Id INT NOT NULL,
+                        Name VARCHAR(100),
+                        Floor INT,
+                        PRIMARY KEY (Id)
                     );
                 END;"
                ,con);

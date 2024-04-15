@@ -5,31 +5,31 @@ namespace StudentService
 {
     public class StaticDataStore : IStaticDataStore
     {
-        public List<Students> Students => new List<Students>()
+        public List<Student> Students => new List<Student>()
         {
-            new Students
-            {
-                StudentId = 1,
-                StudentName = "Akila"
+            //new Student
+            //{
+            //    StudentId = 1,
+            //    StudentName = "Akila"
                 
-            },
+            //},
 
-            new Students
-            {
-                StudentId = 2,
-                StudentName = "Akalanka"
-            },
+            //new Student
+            //{
+            //    StudentId = 2,
+            //    StudentName = "Akalanka"
+            //},
 
-            new Students
-            {
-                StudentId = 3,
-                StudentName = "Pathum"
-            },
-            new Students
-            {
-                StudentId = 4,
-                StudentName = "Sandun"
-            },
+            //new Student
+            //{
+            //    StudentId = 3,
+            //    StudentName = "Pathum"
+            //},
+            //new Student
+            //{
+            //    StudentId = 4,
+            //    StudentName = "Sandun"
+            //},
         };
 
         public List<Grade> Grades => new List<Grade>()

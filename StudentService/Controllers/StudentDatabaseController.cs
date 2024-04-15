@@ -24,18 +24,18 @@ namespace StudentService.Controllers
             var sql = "SELECT * FROM Student";
             using (var connection = SqlConnection())
             {
-                var students = await connection.QueryAsync<Students>(sql);
+                var students = await connection.QueryAsync<Student>(sql);
                 return Ok(students);
             }
         }
 
-        [HttpPost]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var sql = "SELECT * FROM Students WHERE StudentId = @Id";
+            var sql = "SELECT * FROM Student WHERE id = @Id";
             using (var connection = SqlConnection())
             {
-                var students = await connection.QueryAsync<Students>(sql, new { Id = id });
+                var students = await connection.QueryAsync<Student>(sql, new { Id = id });
                 if (students == null)
                 {
                     return NotFound();
@@ -51,7 +51,7 @@ namespace StudentService.Controllers
             var sql = "SELECT * FROM Student";
             using (var connection = SqlConnection())
             {
-                var students = await connection.QueryAsync<Students>(sql);
+                var students = await connection.QueryAsync<Student>(sql);
                 return Ok(students);
             }
 
@@ -62,7 +62,7 @@ namespace StudentService.Controllers
             var sql = "SELECT * FROM Student";
             using (var connection = SqlConnection())
             {
-                var students = await connection.QueryAsync<Students>(sql);
+                var students = await connection.QueryAsync<Student>(sql);
                 return Ok(students);
             }
 

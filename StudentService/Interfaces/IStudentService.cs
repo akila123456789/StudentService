@@ -4,12 +4,12 @@ namespace StudentService.Interfaces
 {
     public interface IStudentService
     {
-        public List<Students> GetAllStudets();
+        public List<Student> GetAllStudets();
 
-        public Students GetById(int id);
-        public Students GetByName(string name);
-        public Students GetByCity(string city);
-        public Students CompareStudentsByCity(Students studentsByName, Students studentsByCity);
+        public Student GetById(int id);
+        public Student GetByName(string name);
+        public Student GetByCity(string city);
+        public Student CompareStudentsByCity(Student studentsByName, Student studentsByCity);
 
     }
 }

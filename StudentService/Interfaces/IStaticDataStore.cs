@@ -4,7 +4,7 @@ namespace StudentService.Interfaces
 {
     public interface IStaticDataStore
     {
-        public List<Students> Students { get;}
+        public List<Student> Students { get;}
 
         public List<Grade> Grades { get;}
 

@@ -19,21 +19,21 @@ namespace StudentService.Controllers
         }
 
         [HttpGet]
-        public ActionResult <List<Students>> GetAllStudetss()
+        public ActionResult <List<Student>> GetAllStudetss()
         {
             var students = _studentService.GetAllStudets();
             return Ok(students);
         }
 
         [HttpGet("Id")]
-        public ActionResult<Students> GetById (int id)
+        public ActionResult<Student> GetById (int id)
         {
             var student = _studentService.GetById(id);
             return Ok(student);
         }
 
         [HttpGet("filter")]
-        public ActionResult<Students> Filter(string? name, string? city)
+        public ActionResult<Student> Filter(string? name, string? city)
         {
             if (name == null && city != null)
             {
@@ -53,27 +53,27 @@ namespace StudentService.Controllers
             }
             else
             {
-                return new Students();
+                return new Student();
             }
         }
 
 
         [HttpPost]
 
-        public ActionResult<List<Students>> CreateStudent()
+        public ActionResult<List<Student>> CreateStudent()
         {
             throw new NotImplementedException();
         }
 
         [HttpPut]
 
-        public ActionResult<List<Students>> UpdateStudent()
+        public ActionResult<List<Student>> UpdateStudent()
         {
             throw new NotImplementedException();
         }
 
         [HttpDelete]
-        public ActionResult<List<Students>> DeleteStudent()
+        public ActionResult<List<Student>> DeleteStudent()
         {
             throw new NotImplementedException();
         }
